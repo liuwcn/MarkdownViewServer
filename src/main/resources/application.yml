@@ -1,0 +1,36 @@
+server:
+  port: 8081
+spring:
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+  jackson:
+    time-zone: GMT+8
+  devtools:
+    restart:
+      enabled: true
+      trigger-file: .reloadtrigger
+
+myconfig:
+  root-dir: D:/nut/N-笔记/100-工作
+  #需要排除的目录，正则
+  exclude-dir: ^assets$
+  base-url: http://127.0.0.1:8081
+  #简单的密码认证
+  token: lgoqvmh4f9zja
+
+debug: true
+logging:
+  file:
+    max-history: 15
+    max-size: 50M
+  level:
+    work.lovejava.life: DEBUG
+    org.hibernate: ERROR
+    java.sql.Connection: DEBUG
+    java.sql.Statement: DEBUG
+    java.sql.PreparedStatement: DEBUG
+    java.sql.ResultSet: DEBUG
